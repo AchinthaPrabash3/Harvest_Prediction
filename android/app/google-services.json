@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "810964101426",
+    "project_id": "harvest-prediction-9e751",
+    "storage_bucket": "harvest-prediction-9e751.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810964101426:android:a82ecbd4bbea33209d4f2b",
+        "android_client_info": {
+          "package_name": "com.example.harvestapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoSqGMVoiF8vj8c49YYHpvTPYEw-x_oXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810964101426:android:966b2c47c473bed59d4f2b",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoSqGMVoiF8vj8c49YYHpvTPYEw-x_oXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
