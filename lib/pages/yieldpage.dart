@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:harvestapp/pages/yieldCard.dart';
 
 class Yield extends StatefulWidget {
   const Yield({super.key});
@@ -102,6 +103,14 @@ class _YieldState extends State<Yield> {
                   ),
                   SizedBox(
                     height: 10,
+                  ),
+                  SizedBox(
+                    height: 400,
+                    child: SingleChildScrollView(
+                      child: Column(children: [
+                        YieldCard(),
+                      ]),
+                    ),
                   )
                 ],
               )

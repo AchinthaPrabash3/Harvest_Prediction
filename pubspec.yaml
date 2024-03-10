@@ -28,3 +28,4 @@ flutter:
   assets:
     - lib/assets/image1.png
     - lib/assets/profile.jpeg
+    - lib/assets/crimg.png

@@ -280,7 +280,7 @@ class _HomePageState extends State<HomePage> {
                                           color: Colors.white,
                                           height: 1.2,
                                           fontWeight: FontWeight.w700,
-                                          fontSize: 16,
+                                          fontSize: 20,
                                         ),
                                       ),
                                     ),

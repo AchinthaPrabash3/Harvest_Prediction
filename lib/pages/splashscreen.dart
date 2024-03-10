@@ -16,7 +16,7 @@ class __SplahScreenState extends State<SplahScreen>
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 5), () {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (_) => Login()));
     });
@@ -41,7 +41,7 @@ class __SplahScreenState extends State<SplahScreen>
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter),
         ),
-        child: Icon(
+        child: const Icon(
           Icons.face,
           size: 40,
         ),
