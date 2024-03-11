@@ -12,6 +12,34 @@ class HarvestPrediction extends StatefulWidget {
 }
 
 class _HarvestPredictionState extends State<HarvestPrediction> {
+  List locations = [
+    "Galle",
+    "Matara",
+    'Hambantota',
+    "Kalutara",
+    "Colombo",
+    "Hampaha",
+    "Matala",
+    "Kandy",
+    "Nuwara Eliya",
+    "kegalle",
+    "Ratnapura",
+    "Anuradapura",
+    "Polonnaruwa",
+    "Jaffna",
+    "Kilinochchi",
+    "Mannar",
+    "Mullativeu",
+    "Vavuniya",
+    "Puttalam",
+    "Kurunegala",
+    "Trincomalee",
+    "Batticola",
+    "Ampara",
+    "Badulla",
+    "Monaragala"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +70,7 @@ class _HarvestPredictionState extends State<HarvestPrediction> {
           child: Column(
             children: [
               DropdownSearch(
-                items: const ["colombo", "Matara", "Galle", "GAmpaha", "ino"],
+                items: locations,
                 dropdownDecoratorProps: DropDownDecoratorProps(
                     dropdownSearchDecoration: InputDecoration(
                         filled: true,
@@ -230,7 +258,6 @@ class _HarvestPredictionState extends State<HarvestPrediction> {
                         )),
                   ),
                   SizedBox(
-                    height: 350,
                     child: SingleChildScrollView(
                       child: Column(children: [
                         HarvestCard(

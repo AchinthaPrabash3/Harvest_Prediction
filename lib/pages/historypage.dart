@@ -11,29 +11,43 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(color: Colors.grey.shade300),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              YieldCard(
-                district: 'Matara',
-                plantation: "Rice",
-                aria: "3",
-                Prediction: "3",
-                farmerId: "SP20030110",
+        child: Column(
+          children: [
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: SearchBar(
+            //     leading: Icon(
+            //       Icons.search_outlined,
+            //       size: 35,
+            //       color: Colors.grey.shade500,
+            //     ),
+            //   ),
+            // ),
+            SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  YieldCard(
+                    district: 'Matara',
+                    plantation: "Rice",
+                    aria: "3",
+                    Prediction: "3",
+                    farmerId: "SP20030110",
+                  ),
+                  HarvestCard(
+                    fId: 'SA20030110',
+                    n: '10',
+                    p: '10',
+                    k: '10',
+                    rainfall: '14',
+                    temp: '33',
+                    ph: '2.5',
+                    recommendation: 'Rice',
+                  ),
+                ],
               ),
-              HarvestCard(
-                fId: 'SA20030110',
-                n: '10',
-                p: '10',
-                k: '10',
-                rainfall: '14',
-                temp: '33',
-                ph: '2.5',
-                recommendation: 'Rice',
-              )
-            ],
-          ),
+            ),
+          ],
         ));
   }
 }

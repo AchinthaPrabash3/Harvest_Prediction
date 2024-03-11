@@ -22,6 +22,34 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController _username = TextEditingController();
   // final TextEditingController _destrict = TextEditingController();
 
+  List locations = [
+    "Galle",
+    "Matara",
+    'Hambantota',
+    "Kalutara",
+    "Colombo",
+    "Hampaha",
+    "Matala",
+    "Kandy",
+    "Nuwara Eliya",
+    "kegalle",
+    "Ratnapura",
+    "Anuradapura",
+    "Polonnaruwa",
+    "Jaffna",
+    "Kilinochchi",
+    "Mannar",
+    "Mullativeu",
+    "Vavuniya",
+    "Puttalam",
+    "Kurunegala",
+    "Trincomalee",
+    "Batticola",
+    "Ampara",
+    "Badulla",
+    "Monaragala"
+  ];
+
   Future<void> registerUser() async {
     BuildContext? localContext = context;
     showDialog(
@@ -207,7 +235,7 @@ class _SignUpState extends State<SignUp> {
     return SizedBox(
       height: 55,
       child: DropdownSearch(
-        items: const ["Galle", "Matara"],
+        items: locations,
         dropdownDecoratorProps: DropDownDecoratorProps(
             dropdownSearchDecoration: InputDecoration(
                 prefixIcon: Icon(Icons.explore_outlined),

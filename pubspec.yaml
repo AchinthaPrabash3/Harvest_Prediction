@@ -29,3 +29,6 @@ flutter:
     - lib/assets/image1.png
     - lib/assets/profile.jpeg
     - lib/assets/crimg.png
+    - lib/assets/update.png
+    - lib/assets/crimg2.png
+    - lib/assets/profimg.png

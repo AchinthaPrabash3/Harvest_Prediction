@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           SizedBox(child: drawerHeader()),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 1.4,
+            height: MediaQuery.of(context).size.height / 1.3,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -188,16 +188,6 @@ class _HomePageState extends State<HomePage> {
                 Column(
                   children: [
                     ListTile(
-                      title: Text('Settings'),
-                      leading: Icon(
-                        Icons.settings_outlined,
-                        size: 30,
-                      ),
-                      splashColor:
-                          Theme.of(context).primaryColor.withOpacity(0.5),
-                      onTap: () {},
-                    ),
-                    ListTile(
                       onTap: () {
                         Navigator.of(context).pushAndRemoveUntil(
                             MaterialPageRoute(builder: (context) => Login()),
@@ -239,7 +229,7 @@ class _HomePageState extends State<HomePage> {
                     backgroundColor: Colors.white,
                     child: ClipOval(
                       child: Image.asset(
-                        'lib/assets/profile.jpeg',
+                        'lib/assets/profimg.png',
                         fit: BoxFit.cover,
                         width: 85,
                         height: 85,

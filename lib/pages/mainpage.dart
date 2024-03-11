@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:harvestapp/pages/harvestpage.dart';
+import 'package:harvestapp/pages/newsCard.dart';
 import 'package:harvestapp/pages/yieldpage.dart';
 
 class Mainpage extends StatefulWidget {
@@ -57,17 +58,50 @@ class _MainpageState extends State<Mainpage> {
                     ),
                   ),
                   Container(
-                    decoration: BoxDecoration(color: Colors.amberAccent),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage('lib/assets/crimg2.png'),
+                            fit: BoxFit.cover)),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(left: 10.0, bottom: 15),
+                          child: Text(
+                            'Predict the Feture\nWin the Field',
+                            style: TextStyle(
+                                height: 1.1,
+                                fontSize: 38,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w800),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ]),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: MainPageNavBtn(context),
             ),
-            SingleChildScrollView(
-              child: Column(
-                children: [],
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20.0, top: 15),
+                  child: Text(
+                    'Updates',
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.w500),
+                  ),
+                ),
+                Column(
+                  children: [NewsCard()],
+                ),
+              ],
             )
           ],
         ),
@@ -84,14 +118,15 @@ class _MainpageState extends State<Mainpage> {
           height: 70,
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                gradient: LinearGradient(
-                    begin: Alignment.bottomRight,
-                    end: Alignment.topLeft,
-                    colors: [Colors.green.shade900, Colors.green.shade300])),
+              borderRadius: BorderRadius.circular(10),
+              // gradient: LinearGradient(
+              //     begin: Alignment.bottomRight,
+              //     end: Alignment.topLeft,
+              //     colors: [Colors.green.shade600, Colors.green.shade200])
+            ),
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.transparent,
+                    backgroundColor: Colors.green.shade200,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () => {
@@ -105,7 +140,7 @@ class _MainpageState extends State<Mainpage> {
                     Icon(
                       Icons.trending_up_outlined,
                       size: 34,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     SizedBox(
                       height: 1,
@@ -113,7 +148,7 @@ class _MainpageState extends State<Mainpage> {
                     Text(
                       'Yield',
                       style: TextStyle(
-                          height: 1, fontSize: 14, color: Colors.white),
+                          height: 1, fontSize: 14, color: Colors.black),
                     )
                   ],
                 )),
@@ -127,14 +162,15 @@ class _MainpageState extends State<Mainpage> {
           height: 70,
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                gradient: LinearGradient(
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                    colors: [Colors.green.shade900, Colors.green.shade300])),
+              borderRadius: BorderRadius.circular(10),
+              // gradient: LinearGradient(
+              //     begin: Alignment.bottomLeft,
+              //     end: Alignment.topRight,
+              //     colors: [Colors.green.shade600, Colors.green.shade200])
+            ),
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.transparent,
+                    backgroundColor: Colors.green.shade200,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
                 onPressed: () => {
@@ -148,7 +184,7 @@ class _MainpageState extends State<Mainpage> {
                     Icon(
                       Icons.analytics_outlined,
                       size: 34,
-                      color: Colors.white,
+                      color: Colors.black,
                     ),
                     SizedBox(
                       height: 1,
@@ -156,7 +192,7 @@ class _MainpageState extends State<Mainpage> {
                     Text(
                       'Harvest',
                       style: TextStyle(
-                          height: 1, fontSize: 14, color: Colors.white),
+                          height: 1, fontSize: 14, color: Colors.black),
                     )
                   ],
                 )),

@@ -15,6 +15,58 @@ class Yield extends StatefulWidget {
 
 class _YieldState extends State<Yield> {
   late String district;
+
+  List<String> cropTypes = [
+    "Rice",
+    "Carrot",
+    "Banana",
+    "Tea",
+    "Corn",
+    "Cinnamon",
+    "Pepper",
+    "Greenchilli",
+    "Cucumber",
+    "Mungbean",
+    "Potato",
+    "Pomegranate",
+    "Mango",
+    "Watermelon",
+    "Beetroot",
+    "Orange",
+    "Papaya",
+    "Coconut",
+    "Brinjal",
+    "Yard long bean",
+    "Coffee"
+  ];
+
+  List<String> locations = [
+    "Galle",
+    "Matara",
+    'Hambantota',
+    "Kalutara",
+    "Colombo",
+    "Hampaha",
+    "Matala",
+    "Kandy",
+    "Nuwara Eliya",
+    "kegalle",
+    "Ratnapura",
+    "Anuradapura",
+    "Polonnaruwa",
+    "Jaffna",
+    "Kilinochchi",
+    "Mannar",
+    "Mullativeu",
+    "Vavuniya",
+    "Puttalam",
+    "Kurunegala",
+    "Trincomalee",
+    "Batticola",
+    "Ampara",
+    "Badulla",
+    "Monaragala"
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -152,7 +204,7 @@ class _YieldState extends State<Yield> {
 
   DropdownSearch<String> cropTypeDropdown() {
     return DropdownSearch(
-      items: const ["Rice", "Carrot", "Banana", "Tea", "ino"],
+      items: cropTypes,
       dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
               filled: true,
@@ -184,7 +236,7 @@ class _YieldState extends State<Yield> {
 
   DropdownSearch<String> districtDropDown() {
     return DropdownSearch(
-      items: const ["colombo", "Matara", "Galle", "GAmpaha", "ino"],
+      items: locations,
       dropdownDecoratorProps: DropDownDecoratorProps(
           dropdownSearchDecoration: InputDecoration(
               filled: true,
