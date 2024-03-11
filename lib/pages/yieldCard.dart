@@ -1,9 +1,21 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, duplicate_ignore
 
 import 'package:flutter/material.dart';
 
 class YieldCard extends StatefulWidget {
-  const YieldCard({super.key});
+  final String farmerId;
+  final String district;
+  final String aria;
+  final String plantation;
+  // ignore: non_constant_identifier_names
+  final String Prediction;
+  const YieldCard(
+      {super.key,
+      required this.farmerId,
+      required this.district,
+      required this.aria,
+      required this.plantation,
+      required this.Prediction});
 
   @override
   State<YieldCard> createState() => _YieldCardState();
@@ -36,7 +48,7 @@ class _YieldCardState extends State<YieldCard> {
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text(
                           //text input
-                          'ID: SP122334',
+                          'ID: ${widget.farmerId}',
                           style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -71,7 +83,7 @@ class _YieldCardState extends State<YieldCard> {
                               padding: const EdgeInsets.only(left: 5.0),
                               child: Text(
                                 //textfield input
-                                'Matara',
+                                widget.district,
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.w500),
                               ),
@@ -89,7 +101,7 @@ class _YieldCardState extends State<YieldCard> {
                               padding: const EdgeInsets.only(left: 5.0),
                               child: Text(
                                 //text field input
-                                'Rice',
+                                widget.plantation,
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.w500),
                               ),
@@ -107,7 +119,7 @@ class _YieldCardState extends State<YieldCard> {
                           padding: const EdgeInsets.only(left: 5.0),
                           child: Text(
                             //textfiled input
-                            '2 Acres',
+                            '${widget.aria} Acres',
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.w500),
                           ),
@@ -134,7 +146,7 @@ class _YieldCardState extends State<YieldCard> {
                   ),
                   Text(
                     // add the API result
-                    '3 Tons',
+                    '${widget.Prediction} Tons',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                   )
                 ],

@@ -1,11 +1,13 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_typing_uninitialized_variables, non_constant_identifier_names
 
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:harvestapp/pages/yieldCard.dart';
 
 class Yield extends StatefulWidget {
-  const Yield({super.key});
+  const Yield({
+    super.key,
+  });
 
   @override
   State<Yield> createState() => _YieldState();
@@ -108,7 +110,13 @@ class _YieldState extends State<Yield> {
                     height: 400,
                     child: SingleChildScrollView(
                       child: Column(children: [
-                        YieldCard(),
+                        YieldCard(
+                          district: 'Matara',
+                          plantation: "Rice",
+                          aria: "3",
+                          Prediction: "3",
+                          farmerId: "SP20030110",
+                        ),
                       ]),
                     ),
                   )

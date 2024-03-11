@@ -232,7 +232,18 @@ class _HarvestPredictionState extends State<HarvestPrediction> {
                   SizedBox(
                     height: 350,
                     child: SingleChildScrollView(
-                      child: Column(children: [HarvestCard()]),
+                      child: Column(children: [
+                        HarvestCard(
+                          fId: 'SA20030110',
+                          n: '10',
+                          p: '10',
+                          k: '10',
+                          rainfall: '14',
+                          temp: '33',
+                          ph: '2.5',
+                          recommendation: 'Rice',
+                        )
+                      ]),
                     ),
                   )
                 ],
