@@ -35,6 +35,7 @@ class _YieldCardState extends State<YieldCard> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text(
+                          //text input
                           'ID: SP122334',
                           style: TextStyle(
                               fontSize: 16,
@@ -69,6 +70,7 @@ class _YieldCardState extends State<YieldCard> {
                             Padding(
                               padding: const EdgeInsets.only(left: 5.0),
                               child: Text(
+                                //textfield input
                                 'Matara',
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.w500),
@@ -86,6 +88,7 @@ class _YieldCardState extends State<YieldCard> {
                             Padding(
                               padding: const EdgeInsets.only(left: 5.0),
                               child: Text(
+                                //text field input
                                 'Rice',
                                 style: TextStyle(
                                     fontSize: 18, fontWeight: FontWeight.w500),
@@ -103,6 +106,7 @@ class _YieldCardState extends State<YieldCard> {
                         Padding(
                           padding: const EdgeInsets.only(left: 5.0),
                           child: Text(
+                            //textfiled input
                             '2 Acres',
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.w500),
@@ -129,6 +133,7 @@ class _YieldCardState extends State<YieldCard> {
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),
                   ),
                   Text(
+                    // add the API result
                     '3 Tons',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                   )

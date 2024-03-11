@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
+import 'package:harvestapp/pages/harvestCard.dart';
 
 class HarvestPrediction extends StatefulWidget {
   const HarvestPrediction({super.key});
@@ -216,6 +217,26 @@ class _HarvestPredictionState extends State<HarvestPrediction> {
                   ),
                 ),
               ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: Text(
+                          'Result',
+                          style: TextStyle(fontSize: 20),
+                        )),
+                  ),
+                  SizedBox(
+                    height: 350,
+                    child: SingleChildScrollView(
+                      child: Column(children: [HarvestCard()]),
+                    ),
+                  )
+                ],
+              )
             ],
           ),
         ),
