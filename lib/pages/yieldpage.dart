@@ -159,7 +159,7 @@ class _YieldState extends State<Yield> {
                     height: 10,
                   ),
                   SizedBox(
-                    height: 400,
+                    height: 350,
                     child: SingleChildScrollView(
                       child: Column(children: [
                         YieldCard(
